@@ -17,6 +17,17 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ProcessTranslation();
+        ProcessRotation();
+    }
+
+    void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+    }
+
+    void ProcessTranslation()
+    {
         // float horizontalThrow = movement.ReadValue<Vector2>().x;
         // float verticalThrow = movement.ReadValue<Vector2>().y;
         // Debug.Log(horizontalThrow);
